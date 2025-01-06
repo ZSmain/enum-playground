@@ -26,3 +26,10 @@ make runserver
 You can either use the Django admin to create new instances of the models or the Django form in the home page: http://127.0.0.1:8000/
 
 Select the type of Enum type you want to test, and fill the form with the data you want to test.
+
+# Testing
+
+```bash
+# Run the tests
+make test
+```

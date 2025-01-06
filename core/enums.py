@@ -22,3 +22,7 @@ class CategoryTextChoices(TextChoices):
     CLOTHING = "C", "Clothing", "👕", "Apparel and fashion items"
     BOOKS = "B", "Books", "📚", "Books and publications"
     FOOD = "F", "Food", "🍔", "Food and beverages"
+
+
+
+

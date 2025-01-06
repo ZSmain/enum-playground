@@ -8,6 +8,7 @@ dependencies = [
     "django>=5.1.4",
     "django-enum>=2.0.2",
     "enum-properties>=2.0.1",
+    "ipython>=8.31.0",
     "typing-extensions>=4.12.2",
 ]
 
