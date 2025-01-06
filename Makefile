@@ -18,6 +18,10 @@ runserver:
 createsuperuser:
 	uv run python manage.py createsuperuser
 
+.PHONY: test
+test:
+	uv run python manage.py test
+
 .PHONY: collectstatic
 collectstatic:
 	uv run python manage.py collectstatic

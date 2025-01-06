@@ -9,8 +9,8 @@ class ProductStrEnumPropAdmin(admin.ModelAdmin):
         "name",
         "price",
         "category",
-        "category_symbol",
-        "category_description",
+        # "category_symbol",
+        # "category_description",
     ]
     list_filter = ["category"]
 
@@ -21,7 +21,7 @@ class ProductTextChoicesAdmin(admin.ModelAdmin):
         "name",
         "price",
         "category",
-        "category_symbol",
-        "category_description",
+        # "category_symbol",
+        # "category_description",
     ]
     list_filter = ["category"]
