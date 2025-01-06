@@ -1,3 +1,5 @@
+from django.utils.translation import gettext_lazy as _
+
 from enum_properties import StrEnumProperties
 from django_enum.choices import TextChoices
 
@@ -7,10 +9,10 @@ class CategoryStrEnumProp(StrEnumProperties):
     symbol: str
     description: str
 
-    ELECTRONICS = "E", "Electronics", "⚡", "Electronic devices and accessories"
-    CLOTHING = "C", "Clothing", "👕", "Apparel and fashion items"
-    BOOKS = "B", "Books", "📚", "Books and publications"
-    FOOD = "F", "Food", "🍔", "Food and beverages"
+    ELECTRONICS = "E", _("Electronics"), "⚡", _("Electronic devices and accessories")
+    CLOTHING = "C", _("Clothing"), "👕", _("Apparel and fashion items")
+    BOOKS = "B", _("Books"), "📚", _("Books and publications")
+    FOOD = "F", _("Food"), "🍔", _("Food and beverages")
 
 
 class CategoryTextChoices(TextChoices):
@@ -18,11 +20,7 @@ class CategoryTextChoices(TextChoices):
     symbol: str
     description: str
 
-    ELECTRONICS = "E", "Electronics", "⚡", "Electronic devices and accessories"
-    CLOTHING = "C", "Clothing", "👕", "Apparel and fashion items"
-    BOOKS = "B", "Books", "📚", "Books and publications"
-    FOOD = "F", "Food", "🍔", "Food and beverages"
-
-
-
-
+    ELECTRONICS = "E", _("Electronics"), "⚡", _("Electronic devices and accessories")
+    CLOTHING = "C", _("Clothing"), "👕", _("Apparel and fashion items")
+    BOOKS = "B", _("Books"), "📚", _("Books and publications")
+    FOOD = "F", _("Food"), "🍔", _("Food and beverages")
