@@ -9,19 +9,16 @@ class ProductStrEnumProp(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     category = EnumField(CategoryStrEnumProp, default=CategoryStrEnumProp.ELECTRONICS)
 
-    def get_category(self):
-        return CategoryStrEnumProp(self.category)
-
     @property
     def category_symbol(self):
-        return self.get_category().symbol
+        return self.category.symbol
 
     @property
     def category_description(self):
-        return self.get_category().description
+        return self.category.description
 
     def __str__(self):
-        return f"{self.name} ({self.get_category().symbol})"
+        return f"{self.name} ({self.category.symbol})"
 
 
 class ProductTextChoices(models.Model):
@@ -29,16 +26,13 @@ class ProductTextChoices(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     category = EnumField(CategoryTextChoices, default=CategoryTextChoices.ELECTRONICS)
 
-    def get_category(self):
-        return CategoryStrEnumProp(self.category)
-
     @property
     def category_symbol(self):
-        return self.get_category().symbol
+        return self.category.symbol
 
     @property
     def category_description(self):
-        return self.get_category().description
+        return self.category.description
 
     def __str__(self):
-        return f"{self.name} ({self.get_category().symbol})"
+        return f"{self.name} ({self.category.symbol})"
