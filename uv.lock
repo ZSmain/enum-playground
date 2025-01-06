@@ -25,15 +25,44 @@ wheels = [
 ]
 
 [[package]]
+name = "django-enum"
+version = "2.0.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/47/b5/466ac9e47aaeaf0c63a7c269ee5f47a8be8400917b5f079a01f280221ace/django_enum-2.0.2.tar.gz", hash = "sha256:d431dc997392824671d27a1233d2bada0e386c4df6cfd4ed049161219693a5d8", size = 29724 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c8/a4/9a0ce6e8adc1bfe7c24de8f913f3acdad32f30e3f179410b50e6693f8adb/django_enum-2.0.2-py3-none-any.whl", hash = "sha256:5843285f6286cb49ba041607cf3ba554e7eb5c5e8426bab79105d2a766bffb58", size = 29002 },
+]
+
+[[package]]
 name = "enum-playground"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "django" },
+    { name = "django-enum" },
+    { name = "enum-properties" },
+    { name = "typing-extensions" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "django", specifier = ">=5.1.4" }]
+requires-dist = [
+    { name = "django", specifier = ">=5.1.4" },
+    { name = "django-enum", specifier = ">=2.0.2" },
+    { name = "enum-properties", specifier = ">=2.0.1" },
+    { name = "typing-extensions", specifier = ">=4.12.2" },
+]
+
+[[package]]
+name = "enum-properties"
+version = "2.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/3a/1e/29ed072a664fd33f4a117f1ba2f5e011a68dd6040625a9cfcab216dbf304/enum_properties-2.0.1.tar.gz", hash = "sha256:0a451a069d6cc817649b337d7ebc30970f8d745faff3f5898afa53d9fe8ede3f", size = 11724 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c2/2c/eca46697ea68257e2cc7d9c4d9989af4ce7a065ad405bce15268d2817849/enum_properties-2.0.1-py3-none-any.whl", hash = "sha256:28e50d9fc3567a38c55a0c82e9d38dec835654c0a4d26a4adbcec15592036335", size = 10608 },
+]
 
 [[package]]
 name = "sqlparse"
@@ -42,6 +71,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/e5/40/edede8dd6977b0d3da179a342c198ed100dd2aba4be081861ee5911e4da4/sqlparse-0.5.3.tar.gz", hash = "sha256:09f67787f56a0b16ecdbde1bfc7f5d9c3371ca683cfeaa8e6ff60b4807ec9272", size = 84999 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a9/5c/bfd6bd0bf979426d405cc6e71eceb8701b148b16c21d2dc3c261efc61c7b/sqlparse-0.5.3-py3-none-any.whl", hash = "sha256:cf2196ed3418f3ba5de6af7e82c694a9fbdbfecccdfc72e281548517081f16ca", size = 44415 },
+]
+
+[[package]]
+name = "typing-extensions"
+version = "4.12.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/df/db/f35a00659bc03fec321ba8bce9420de607a1d37f8342eee1863174c69557/typing_extensions-4.12.2.tar.gz", hash = "sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8", size = 85321 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d", size = 37438 },
 ]
 
 [[package]]

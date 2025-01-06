@@ -6,4 +6,11 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "django>=5.1.4",
+    "django-enum>=2.0.2",
+    "enum-properties>=2.0.1",
+    "typing-extensions>=4.12.2",
 ]
+
+[tool.ruff.lint]
+# Avoid enforcing line-length violations (`E501`)
+ignore = ["E501"]
